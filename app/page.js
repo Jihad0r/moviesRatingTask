@@ -7,11 +7,12 @@ import useShow from "./store/useShowStore";
 export default function Home() {
   const {movies,filterMovies,resetFilter} = useMovieStore()
   const { isFormOpen,isDeleteOpen, selectedMovie,openFormModal,closeFormModal,openDeleteModal, closeDeleteModal }  = useShow()
-
+  const averageRating =
+  movies.length === 0 ? 0 :(movies.reduce((sum, movie) => sum + movie.rating, 0) / movies.length).toFixed(1);
   return (
     <div className="font-sans j_bg min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <div className="flex justify-between w-full items-center mb-20">
-        <div  className="flex justify-between gap-6"><p>Total Movies: {movies.length}</p><p>/</p><p>Average Rating: 3.7</p></div>
+        <div  className="flex justify-between gap-6"><p>Total Movies: {movies.length}</p><p>/</p><p>Average Rating: {averageRating}</p></div>
         <div className="flex justify-between gap-6">
           <button className="bg-blue-400 rounded-sm text-xs px-2 py-1 cursor-pointer" onClick={openDeleteModal}>Remove Ratings</button>
           <button className="bg-blue-400 rounded-sm text-xs px-2 py-1 cursor-pointer" onClick={openFormModal}>Add Movie</button>
