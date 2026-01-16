@@ -14,9 +14,9 @@ export default function Movie({movie}) {
   const total = 5
   
   return (
-    <div className="w-[calc(33%-8px)] bg-gray-50 relative rounded-lg" onMouseOver={()=>setShow(true)} onMouseOut={()=>setShow(false)}>
+    <div className=" w-[90%] m-auto md:w-[calc(50%-8px)] lg:w-[calc(33%-8px)] bg-gray-50 relative rounded-lg" onMouseOver={()=>setShow(true)} onMouseOut={()=>setShow(false)}>
       <div className="absolute top-0 right-0"> <p className="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 text-black text-lg mt-[2px]">{rate}</p><FaStar className="text-amber-500 text-6xl" /></div>
-      <img className="rounded-t-lg" src={movie.image} alt={movie.name} />
+      <img className="rounded-t-lg w-full" src={movie.image} alt={movie.name} />
       <div className="text-black p-4">
         <h1 className="text-3xl">{movie.name}</h1>
       <div className="flex gap-2">

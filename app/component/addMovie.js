@@ -81,7 +81,7 @@ export default function AddMovie({movie}) {
 
 
   return (
-    <form onSubmit={handleSubmit} className="j_bg p-4 w-1/2 m-auto rounded-lg space-y-3">
+    <form onSubmit={handleSubmit} className="j_bg p-4 w-[80%] md:w-1/2 m-auto rounded-lg space-y-3">
 
       <div>
         <label htmlFor="name">Name</label>

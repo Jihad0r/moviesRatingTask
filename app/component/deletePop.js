@@ -17,7 +17,7 @@ export default function DeleteRate({movie}) {
       }
     }
   return (
-    <div className="delete p-4 w-1/3 h-50 m-auto rounded-lg j_bg">
+    <div className="delete p-4 w-1/2 h-50 m-auto rounded-lg j_bg">
         <p className="h-35">
   Are you sure you want to delete your rating for
   <span className="font-bold">{movie?.name || "all movies"}</span>?
