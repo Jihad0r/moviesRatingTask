@@ -34,9 +34,9 @@ export default function Home() {
   className={`flex justify-center w-full gap-2 sticky top-0 z-50 p-6 transition-all duration-300
     ${isScrolled ? "bg-white/10 backdrop-blur-md shadow-md" : "bg-transparent"}
   `}>
-           <p className="bg-purple-500 text-white text-xs md:text-md rounded-lg px-4 cursor-pointer" onClick={()=>resetFilter()}>All</p>
+           <p className="bg-purple-500 text-white text-xs md:text-sm rounded-lg px-4 cursor-pointer" onClick={()=>resetFilter()}>All</p>
           {["Drama", "Crime", "Action", "Comedy"].map((genre) => (
-            <p className="bg-purple-500 text-white text-xs md:text-md rounded-lg px-4 cursor-pointer" onClick={()=>filterMovies(genre)}>{genre}</p>
+            <p className="bg-purple-500 text-white text-xs md:text-sm rounded-lg px-4 cursor-pointer" onClick={()=>filterMovies(genre)}>{genre}</p>
           ))}
       </div>
       <div className="flex w-full flex-wrap p-8 gap-4 sm:p-10">
