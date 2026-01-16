@@ -14,11 +14,11 @@ export default function Movie({movie}) {
   const total = 5
   
   return (
-    <div className=" w-[90%] m-auto md:w-[calc(50%-8px)] lg:w-[calc(33%-8px)] bg-gray-50 relative rounded-lg" onTouchStart={() => setShow(true)}
+    <div className=" w-[90%] m-auto lg:m-0 sm:w-[calc(50%-8px)] md:w-[calc(33%-8px)] lg:w-[calc(25%-8px)] xl:w-[calc(20%-8px)] bg-gray-50 relative rounded-lg" onTouchStart={() => setShow(true)}
   onMouseEnter={() => setShow(true)}
   onMouseLeave={() => setShow(false)}>
-      <div className="absolute top-1 right-1"> <p className="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 text-black text-xs md:text-lg mt-[2px]">{rate}</p><FaStar className="text-amber-500 text-3xl md:text-6xl" /></div>
-      <img className="rounded-t-lg w-full" src={movie.image} alt={movie.name} />
+      <div className="absolute top-1 right-1"> <p className="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 text-black text-xs md:text-sm mt-[2px]">{rate}</p><FaStar className="text-amber-500 text-2xl md:text-4xl" /></div>
+      <img className="rounded-t-lg w-full  h-100 md:h-80" src={movie.image} alt={movie.name} />
       <div className="text-black p-4">
         <h1 className="text-3xl">{movie.name}</h1>
       <div className="flex gap-2">

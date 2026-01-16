@@ -84,7 +84,7 @@ export default function Home() {
           </p>
         ))}
       </div>
-      <div className="flex flex-wrap p-8 gap-4 sm:p-10">
+      <div className="flex flex-wrap p-8 gap-2 sm:p-10">
         {movies.map((movie) => (
           <Movie key={movie.id} movie={movie} />
         ))}
